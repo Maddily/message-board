@@ -17,6 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public/styles")));
 app.use(express.static(path.join(__dirname, "public/images")));
 
+app.use("/", indexRouter);
+app.use("/messages", messageRouter);
+
 app.listen(PORT, (err) => {
   if (err) throw err;
   console.log(`App running on port ${PORT}`);
