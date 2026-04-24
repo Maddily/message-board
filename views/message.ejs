@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="/normalize.css">
+    <title>Viewing message</title>
+  </head>
+  <body>
+    <div class="board-frame">
+      <div class="board-surface">
+        <div>
+          <p>From: <%= message.user %></p>
+          <p>Message: <%= message.text %></p>
+          <p>Date: <%= message.added %></p>
+        </div>
+        <a href="/">Home</a>
+      </div>
+      <%- include("post-btn") %>
+    </div>
+  </body>
+</html>
