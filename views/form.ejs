@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <title>Post a message</title>
+  </head>
+  <body>
+    <div class="board-frame">
+      <div class="board-surface">
+        <form method="post" action="/new">
+          <h1>New Message</h1>
+          <div>
+            <div>
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Your name here"
+              />
+            </div>
+            <div>
+              <label for="message">Message:</label>
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Your message here"
+              ></textarea>
+            </div>
+          </div>
+          <button type="submit">Submit</button>
+          <br />
+          <a href="/">Home</a>
+        </form>
+      </div>
+      <%- include("post-btn") %>
+    </div>
+  </body>
+</html>
