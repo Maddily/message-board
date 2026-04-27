@@ -1,7 +1,7 @@
 import Router from "express";
 import { v4 as uuidv4 } from "uuid";
 import crypto from "crypto";
-import { formatDate } from "../utils.js";
+import { formatDate, generateRandomColor } from "../utils.js";
 
 globalThis.crypto = crypto;
 const indexRouter = Router();
@@ -21,7 +21,7 @@ const messages = [
   },
 ];
 
-indexRouter.get("/", (req, res) => res.render("index", { messages }));
+indexRouter.get("/", (req, res) => res.render("index", { messages, generateRandomColor }));
 indexRouter.get("/new", (req, res) => res.render("form"));
 indexRouter.post("/new", (req, res) => {
   const message = {
