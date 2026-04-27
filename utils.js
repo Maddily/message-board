@@ -16,4 +16,20 @@ function formatDate(date) {
   return `${day}/${month}/${year} - ${hour}:${minute} ${ampm}`;
 }
 
-export { formatDate };
+/**
+ * Generates a random color
+ *
+ * @returns a random color
+ */
+function generateRandomColor() {
+  const chars = "0123456789ABCDEF";
+  let color = "#";
+
+  for (let i = 0; i < 6; i++) {
+    color += chars[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+}
+
+export { formatDate, generateRandomColor };
