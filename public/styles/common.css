@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -8,9 +10,11 @@ html {
 
 body {
   height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 .board-frame {
   height: 100%;
@@ -37,6 +41,7 @@ body {
   background-image: url("light.jpg");
   background-size: cover;
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.25);
+  padding: 30px;
 }
 
 body h1,
@@ -50,10 +55,6 @@ body p {
   color: #fff;
   background-color: #1463b0;
   padding: 14px 30px;
-  font-family: "Nunito", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 600;
-  font-style: normal;
   border-radius: 5px;
   position: absolute;
   bottom: 12px;
