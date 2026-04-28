@@ -8,7 +8,9 @@
   background-color: #fff;
   padding: 25px 15px 15px;
   position: relative;
-  min-width: 200px;
+  max-width: 350px;
+  max-height: fit-content;
+  overflow-wrap: anywhere;
 }
 
 .pin {
