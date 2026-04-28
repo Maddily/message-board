@@ -8,6 +8,7 @@
   background-color: #fff;
   padding: 25px 15px 15px;
   position: relative;
+  min-width: 200px;
   max-width: 350px;
   max-height: fit-content;
   overflow-wrap: anywhere;
@@ -43,4 +44,8 @@
   padding-top: 10px;
   border-top: 1px solid #e7e7e7;
   text-align: end;
+}
+
+.date-and-time {
+  font-size: 0.7rem;
 }
