@@ -11,7 +11,7 @@
   <body>
     <div class="board-frame">
       <div class="board-surface">
-        <article class="message">
+        <article class="message"  style="background-color: <%= generateRandomPastelColor() %>;">
             <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
             <p class="name"><%= message.user %></p>
             <p class="text"><%= message.text %></p>

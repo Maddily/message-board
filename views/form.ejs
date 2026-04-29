@@ -11,7 +11,7 @@
   <body>
     <div class="board-frame">
       <div class="board-surface">
-        <form id="new-post" method="post" action="/new">
+        <form id="new-post" method="post" action="/new" style="background-color: <%= generateRandomPastelColor() %>;">
           <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
           <div class="input-container">
             <label for="name">Name:</label>

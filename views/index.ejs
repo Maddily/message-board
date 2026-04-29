@@ -14,7 +14,7 @@
       <div class="board-surface">
         <main class="messages">
           <% for (const message of messages) { %>
-          <article class="message" data-id="<%= message.id %>">
+          <article class="message" data-id="<%= message.id %>" style="background-color: <%= generateRandomPastelColor() %>;">
             <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
             <p class="name"><%= message.user %></p>
             <p class="text"><%= message.text %></p>
