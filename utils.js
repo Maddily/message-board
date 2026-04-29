@@ -32,4 +32,15 @@ function generateRandomColor() {
   return color;
 }
 
-export { formatDate, generateRandomColor };
+/**
+ * Generates a random pastel color
+ *
+ * @returns a random pastel color
+ */
+function generateRandomPastelColor() {
+  const hue = Math.floor(Math.random() * 360);
+
+  return `hsl(${hue}deg, 100%, 90%)`;
+}
+
+export { formatDate, generateRandomColor, generateRandomPastelColor };
