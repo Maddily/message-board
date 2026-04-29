@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Post a new message to the community message board. Share your thoughts and connect with others."
+    />
     <link rel="stylesheet" href="/form.css" />
     <link rel="stylesheet" href="/common.css" />
     <link rel="stylesheet" href="/normalize.css" />
-    <title>New Post</title>
+    <title>Post a New Message | Message Board</title>
   </head>
   <body>
     <div class="board-frame">
       <div class="board-surface">
-        <form id="new-post" method="post" action="/new" style="background-color: <%= generateRandomPastelColor() %>;">
-          <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
+        <form
+          id="new-post"
+          method="post"
+          action="/new"
+          style="background-color: <%= generateRandomPastelColor() %>"
+        >
+          <div
+            class="pin"
+            style="background-color: <%= generateRandomColor() %>"
+          ></div>
           <div class="input-container">
             <label for="name">Name:</label>
             <input
@@ -34,7 +46,7 @@
             ></textarea>
           </div>
         </form>
-        <input class="submit" form="new-post" type="submit">
+        <input class="submit" form="new-post" type="submit" />
         <%- include("homeButton") %>
       </div>
       <%- include("postButton") %>

@@ -3,20 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/message.css">
-    <link rel="stylesheet" href="/common.css">
-    <link rel="stylesheet" href="/normalize.css">
-    <title>Viewing message</title>
+    <meta
+      name="description"
+      content="Read a message from <%= message.user %> posted on our community message board: <%= message.text.substring(0, 120) %>..."
+    />
+    <link rel="stylesheet" href="/message.css" />
+    <link rel="stylesheet" href="/common.css" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <title>View Message from <%= message.user %> | Message Board</title>
   </head>
   <body>
     <div class="board-frame">
       <div class="board-surface">
-        <article class="message"  style="background-color: <%= generateRandomPastelColor() %>;">
-            <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
-            <p class="name"><%= message.user %></p>
-            <p class="text"><%= message.text %></p>
-            <p class="date-and-time"><%= message.added %></p>
-          </article>
+        <article
+          class="message"
+          style="background-color: <%= generateRandomPastelColor() %>"
+        >
+          <div
+            class="pin"
+            style="background-color: <%= generateRandomColor() %>"
+          ></div>
+          <p class="name"><%= message.user %></p>
+          <p class="text"><%= message.text %></p>
+          <p class="date-and-time"><%= message.added %></p>
+        </article>
         <%- include("homeButton") %>
       </div>
       <%- include("postButton") %>
