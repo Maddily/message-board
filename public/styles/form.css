@@ -48,6 +48,7 @@ label {
   border-bottom: 1px solid #a5a4a4;
   font-weight: 300;
   max-width: 100%;
+  background-color: inherit;
 }
 
 .submit {
