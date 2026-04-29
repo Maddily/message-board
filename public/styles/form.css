@@ -1,0 +1,100 @@
+.board-surface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+form {
+  background-color: #fff;
+  padding: 35px 15px 15px 15px;
+  position: relative;
+  max-width: 220px;
+  min-height: 200px;
+}
+
+.pin {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-8deg);
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.35));
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.22),
+    inset 0 2px 2px rgba(255, 255, 255, 0.35);
+}
+
+label {
+  display: inline-block;
+  min-width: 74px;
+  margin-right: 10px;
+}
+
+.input-container {
+  margin-bottom: 20px;
+}
+
+#name:focus, #message:focus {
+  outline: none;
+}
+
+#name, #message {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #a5a4a4;
+  font-weight: 300;
+  max-width: 100%;
+}
+
+.submit {
+  all: unset;
+	cursor: pointer;
+}
+
+.home-btn, .submit {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: #1463b0;
+  font-size: 1.1rem;
+  padding: 10px 30px;
+  border-radius: 5px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35), 0 2px 4px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.15s ease;
+}
+
+.home-btn:active, .submit:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.home-btn:hover, .submit:hover {
+  transform: translateY(-1px);
+  background-color: #1e6dbb;
+}
+
+@media only screen and (min-width: 500px) {
+  form {
+    max-width: none;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: end;
+  }
+
+  #name, #message {
+    width: calc(100% - 74px);
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  form {
+    min-width: 500px;
+  }
+}
