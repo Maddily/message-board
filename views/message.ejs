@@ -25,7 +25,7 @@
           ></div>
           <p class="name"><%= message.user %></p>
           <p class="text"><%= message.text %></p>
-          <p class="date-and-time"><%= message.added %></p>
+          <time class="date-and-time" datetime="<%= new Date(message.added).toISOString() %>"><%= message.added %></time>
         </article>
         <%- include("homeButton") %>
       </div>
