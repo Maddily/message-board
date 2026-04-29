@@ -17,9 +17,9 @@
             <p class="text"><%= message.text %></p>
             <p class="date-and-time"><%= message.added %></p>
           </article>
-        <a class="home-btn" href="/">Home</a>
+        <%- include("homeButton") %>
       </div>
-      <%- include("post-btn") %>
+      <%- include("postButton") %>
     </div>
   </body>
 </html>
