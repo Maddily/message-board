@@ -3,40 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/form.css" />
     <link rel="stylesheet" href="/common.css" />
     <link rel="stylesheet" href="/normalize.css" />
-    <title>Post a message</title>
+    <title>New Post</title>
   </head>
   <body>
     <div class="board-frame">
       <div class="board-surface">
-        <form method="post" action="/new">
-          <h1>New Message</h1>
-          <div>
-            <div>
-              <label for="name">Name:</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your name here"
-              />
-            </div>
-            <div>
-              <label for="message">Message:</label>
-              <textarea
-                name="message"
-                id="message"
-                placeholder="Your message here"
-              ></textarea>
-            </div>
+        <form id="new-post" method="post" action="/new">
+          <div class="pin" style="background-color: <%= generateRandomColor() %>;"></div>
+          <div class="input-container">
+            <label for="name">Name:</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Mary"
+              autocomplete="name"
+              required
+            />
           </div>
-          <button type="submit">Submit</button>
-          <br />
-          <a href="/">Home</a>
+          <div class="input-container">
+            <label for="message">Message:</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Hello"
+              required
+            ></textarea>
+          </div>
         </form>
+        <input class="submit" form="new-post" type="submit">
+        <%- include("homeButton") %>
       </div>
-      <%- include("post-btn") %>
+      <%- include("postButton") %>
     </div>
   </body>
 </html>
