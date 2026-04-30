@@ -8,8 +8,7 @@
       content="Read a message from <%= message.user %> posted on our community message board: <%= message.text.substring(0, 120) %>..."
     />
     <link rel="stylesheet" href="/message.css" />
-    <link rel="stylesheet" href="/common.css" />
-    <link rel="stylesheet" href="/normalize.css" />
+    <%- include("commonLinks") %>
     <title>View Message from <%= message.user %> | Message Board</title>
   </head>
   <body>
